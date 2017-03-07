@@ -59,13 +59,13 @@ import java.util.List;
  * @author Sandy McArthur
  * @version $Id: FileUtils.java 384037 2006-03-07 22:26:37Z scolebourne $
  */
-public class FU
+public class FileUtils
 {
 	
 	/**
 	 * Instances should NOT be constructed in standard programming.
 	 */
-	public FU()
+	public FileUtils()
 	{
 		super();
 	}

@@ -12,7 +12,7 @@ public class LibraryUtil
 	
 	public static void download(File file, URL url) throws IOException
 	{
-		FU.copyURLToFile(url, file);
+		FileUtils.copyURLToFile(url, file);
 	}
 	
 	public static void install(File jar) throws IOException
