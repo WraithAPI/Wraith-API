@@ -1,0 +1,37 @@
+package wraith.library;
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.net.URL;
+import java.net.URLClassLoader;
+
+public class LibraryUtil
+{
+	private static final Class<?>[] parameters = new Class[] {URL.class};
+	
+	public static void download(File file, URL url) throws IOException
+	{
+		FU.copyURLToFile(url, file);
+	}
+	
+	public static void install(File jar) throws IOException
+	{
+		URL u = new URL("jar:file:" + jar.toString() + "!/");
+		URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+		Class<?> sysclass = URLClassLoader.class;
+		
+		try
+		{
+			Method method = sysclass.getDeclaredMethod("addURL", parameters);
+			method.setAccessible(true);
+			method.invoke(sysloader, new Object[] {u});
+		}
+		
+		catch(Throwable t)
+		{
+			t.printStackTrace();
+			throw new IOException("Error, could not add URL to system classloader");
+		}
+	}
+}
