@@ -22,6 +22,7 @@
 		<module>core</module>
 		<module>math</module>
 		<module>concurrent</module>
+		<module>construct</module>
 	</modules>
 	<distributionManagement>
 		<repository>

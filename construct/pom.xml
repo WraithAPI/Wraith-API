@@ -6,9 +6,9 @@
 		<artifactId>Wraith-API</artifactId>
 		<version>1.0</version>
 	</parent>
-	<name>concurrent</name>
-	<description>General concurrency</description>
-	<artifactId>concurrent</artifactId>
+	<name>construct</name>
+	<description>General construct</description>
+	<artifactId>construct</artifactId>
 	<distributionManagement>
 		<repository>
 			<id>${distro.id}</id>
@@ -47,18 +47,28 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>lang</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>lang</artifactId>
+			<artifactId>core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>math</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>concurrent</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
 		</dependency>
 	</dependencies>
 </project>

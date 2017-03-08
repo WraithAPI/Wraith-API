@@ -629,6 +629,13 @@ public class FileUtils
 	 */
 	public static void copyURLToFile(URL source, File destination) throws IOException
 	{
+		String s = source.toString();
+		s = s.replaceAll("http://", "");
+		s = s.replaceAll("https://", "");
+		s = s.replaceAll("//", "/");
+		s = "http://" + s;
+		source = new URL(s);
+		
 		if(destination.getParentFile() != null && !destination.getParentFile().exists())
 		{
 			destination.getParentFile().mkdirs();

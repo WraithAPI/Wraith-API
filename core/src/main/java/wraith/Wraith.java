@@ -7,8 +7,6 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
-import org.apache.commons.lang3.StringUtils;
-import wraith.lang.GList;
 import wraith.library.Coordinate;
 import wraith.library.Coordinates;
 import wraith.library.LibraryInstaller;
@@ -16,6 +14,11 @@ import wraith.library.LibraryManager;
 
 public class Wraith
 {
+	public static void main(String[] args)
+	{
+		WraithAPI.setup();
+	}
+	
 	public static void installWraith(String version) throws Exception
 	{
 		File localRepository = new File(new File("wraith"), "repository");
@@ -59,9 +62,6 @@ public class Wraith
 			
 			// You could also ensure something is installed
 			LibraryManager.ensureInstalled(Coordinates.COMMON_IO.get());
-			
-			// It is now safe to use Wraith Lang and Commons Lang
-			System.out.println(new GList<String>().qadd(StringUtils.capitalize("cap")).shuffleCopy().toString(", "));
 		}
 		
 		catch(Exception e)

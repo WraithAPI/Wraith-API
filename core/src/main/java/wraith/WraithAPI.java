@@ -21,8 +21,8 @@ public class WraithAPI
 		
 		LibraryInstaller installer = new LibraryInstaller(REPO_LOCAL);
 		installer.add(Coordinates.COMMON_LANG.get());
-		installer.add(Coordinates.WRAITH_LANG.get());
 		installer.install();
+		
 		setup = true;
 	}
 	
