@@ -23,6 +23,7 @@
 		<module>math</module>
 		<module>concurrent</module>
 		<module>construct</module>
+		<module>reflect</module>
 	</modules>
 	<distributionManagement>
 		<repository>
