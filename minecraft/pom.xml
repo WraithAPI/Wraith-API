@@ -6,9 +6,9 @@
 		<artifactId>Wraith-API</artifactId>
 		<version>1.0</version>
 	</parent>
-	<name>reflect</name>
-	<description>General reflect</description>
-	<artifactId>reflect</artifactId>
+	<name>minecraft</name>
+	<description>General minecraft</description>
+	<artifactId>minecraft</artifactId>
 	<distributionManagement>
 		<repository>
 			<id>${distro.id}</id>
@@ -44,7 +44,19 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
 	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.11.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>lang</artifactId>

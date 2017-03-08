@@ -6,9 +6,9 @@
 		<artifactId>Wraith-API</artifactId>
 		<version>1.0</version>
 	</parent>
-	<name>reflect</name>
-	<description>General reflect</description>
-	<artifactId>reflect</artifactId>
+	<name>minecraft-construct</name>
+	<description>General minecraft-construct</description>
+	<artifactId>minecraft-construct</artifactId>
 	<distributionManagement>
 		<repository>
 			<id>${distro.id}</id>
@@ -45,6 +45,11 @@
 		</plugins>
 	</build>
 	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>minecraft</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>lang</artifactId>

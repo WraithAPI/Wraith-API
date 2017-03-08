@@ -24,6 +24,8 @@
 		<module>concurrent</module>
 		<module>construct</module>
 		<module>reflect</module>
+		<module>minecraft</module>
+		<module>minecraft-construct</module>
 	</modules>
 	<distributionManagement>
 		<repository>
