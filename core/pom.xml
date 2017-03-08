@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>wraith</groupId>
 		<artifactId>Wraith-API</artifactId>
-		<version>1.0</version>
+		<version>1.0.1</version>
 	</parent>
 	<name>core</name>
 	<description>General core</description>
@@ -30,7 +30,6 @@
 					<include>**/*.wpa</include>
 					<include>**/*.yml</include>
 					<include>**/*.txt</include>
-					<include>**/WraithAPI.java</include>
 				</includes>
 			</resource>
 		</resources>

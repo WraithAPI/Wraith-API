@@ -1,7 +1,10 @@
 package wraith.inject;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -14,13 +17,17 @@ import wraith.library.LibraryInstaller;
 
 public class Injector extends JavaPlugin
 {
-	public static final String WRAITH_VERSION = "1.0";
+	public static String WRAITH_VERSION = "${project.version}";
 	
 	@Override
 	public void onLoad()
 	{
 		try
 		{
+			InputStream in = Injector.class.getResourceAsStream("/app.wpa");
+			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+			WRAITH_VERSION = reader.readLine();
+			reader.close();
 			File localRepository = new File(new File("wraith"), "repository");
 			File jar = new File(localRepository, "wraith/core/" + WRAITH_VERSION + "/core-" + WRAITH_VERSION + ".jar");
 			jar.getParentFile().mkdirs();
