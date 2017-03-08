@@ -39,10 +39,20 @@ public interface Controllable
 	 */
 	public void registerChild(Controllable child);
 	
+	public void unregisterChild(Controllable child);
+	
 	/**
 	 * Get the controller name
 	 * 
 	 * @return the name of this controller
 	 */
 	public String getName();
+	
+	public ControllableHost getHost();
+	
+	public boolean isHost();
+	
+	public void registerTicked(Tickable tickable);
+	
+	public void unregisterTicked(Tickable tickable);
 }

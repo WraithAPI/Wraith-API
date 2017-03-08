@@ -49,7 +49,7 @@ public abstract class TickManagerBase implements TickManager
 		tickables.put(tickable, interval);
 	}
 	
-	protected void registerTicked(Tickable tickable)
+	public void registerTicked(Tickable tickable)
 	{
 		if(isTicked(tickable))
 		{
@@ -57,7 +57,7 @@ public abstract class TickManagerBase implements TickManager
 		}
 	}
 	
-	protected void unregisterTicked(Tickable tickable)
+	public void unregisterTicked(Tickable tickable)
 	{
 		tickableReference.remove(tickable);
 		tickables.remove(tickable);

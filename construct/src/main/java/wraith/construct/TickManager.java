@@ -7,4 +7,8 @@ public interface TickManager
 	public void stop();
 	
 	public void tick();
+	
+	public void unregisterTicked(Tickable tickable);
+	
+	public void registerTicked(Tickable tickable);
 }
