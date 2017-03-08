@@ -8,11 +8,18 @@ public class LibraryInstaller
 {
 	private List<Library> libraries;
 	private File repository;
+	private boolean log;
 	
 	public LibraryInstaller(File repository)
 	{
+		this(repository, false);
+	}
+	
+	public LibraryInstaller(File repository, boolean log)
+	{
 		libraries = new ArrayList<Library>();
 		this.repository = repository;
+		this.log = log;
 	}
 	
 	public LibraryInstaller add(Coordinate coord)
@@ -34,7 +41,17 @@ public class LibraryInstaller
 	
 	public void install()
 	{
+		if(log)
+		{
+			System.out.println("[======================== Installing packages ========================]");
+		}
+		
 		LibraryManager.installBlocking(this);
+		
+		if(log)
+		{
+			System.out.println("[======================== =================== ========================]");
+		}
 	}
 	
 	public void install(Runnable onCompleted)
