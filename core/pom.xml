@@ -25,10 +25,12 @@
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
 				<includes>
 					<include>**/*.wpa</include>
 					<include>**/*.yml</include>
 					<include>**/*.txt</include>
+					<include>**/WraithAPI.java</include>
 				</includes>
 			</resource>
 		</resources>
