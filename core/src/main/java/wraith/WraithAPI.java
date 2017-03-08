@@ -19,7 +19,7 @@ public class WraithAPI
 			return;
 		}
 		
-		LibraryInstaller installer = new LibraryInstaller(REPO_LOCAL, true);
+		LibraryInstaller installer = new LibraryInstaller(REPO_LOCAL);
 		installer.add(Coordinates.COMMON_LANG.get());
 		installer.install();
 		

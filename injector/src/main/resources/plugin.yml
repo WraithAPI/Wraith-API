@@ -1,0 +1,4 @@
+name: WraithInjector
+main: wraith.inject.Injector
+version: 1.0
+load: STARTUP

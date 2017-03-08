@@ -25,6 +25,7 @@
 		<module>construct</module>
 		<module>reflect</module>
 		<module>minecraft</module>
+		<module>injector</module>
 	</modules>
 	<distributionManagement>
 		<repository>
