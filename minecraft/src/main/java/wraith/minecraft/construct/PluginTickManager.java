@@ -1,26 +1,28 @@
 package wraith.minecraft.construct;
 
-import org.bukkit.plugin.Plugin;
 import wraith.construct.TickManagerBase;
+import wraith.minecraft.concurrent.Task;
 
 public class PluginTickManager extends TickManagerBase
 {
-	public PluginTickManager(Plugin base)
-	{
-		
-	}
+	private Task task;
 	
 	@Override
 	public void start()
 	{
-		// TODO Auto-generated method stub
-		
+		task = new Task(0)
+		{
+			@Override
+			public void run()
+			{
+				tick();
+			}
+		};
 	}
 	
 	@Override
 	public void stop()
 	{
-		// TODO Auto-generated method stub
-		
+		task.cancel();
 	}
 }
