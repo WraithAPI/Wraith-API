@@ -12,7 +12,7 @@ public abstract class TaskLater
 			@Override
 			public void run()
 			{
-				run();
+				TaskLater.this.run();
 			}
 		});
 	}

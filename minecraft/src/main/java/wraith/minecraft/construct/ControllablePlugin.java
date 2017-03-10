@@ -26,6 +26,8 @@ public abstract class ControllablePlugin extends UtilityPlugin implements Contro
 	@Override
 	public void launch()
 	{
+		children = new GList<Controllable>();
+		tickManager = new PluginTickManager();
 		onLaunch();
 		tickManager.start();
 		start();
@@ -60,12 +62,12 @@ public abstract class ControllablePlugin extends UtilityPlugin implements Contro
 	@Override
 	public void start()
 	{
-		onStart();
-		
 		for(Controllable i : children)
 		{
 			i.start();
 		}
+		
+		onStart();
 	}
 	
 	@Override

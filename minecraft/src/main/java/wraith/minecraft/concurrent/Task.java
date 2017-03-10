@@ -15,7 +15,7 @@ public abstract class Task
 			@Override
 			public void run()
 			{
-				run();
+				Task.this.run();
 			}
 		}, 0, interval);
 	}
@@ -29,7 +29,7 @@ public abstract class Task
 			@Override
 			public void run()
 			{
-				run();
+				Task.this.run();
 				i.sub(1);
 				
 				if(i.get() <= 0)

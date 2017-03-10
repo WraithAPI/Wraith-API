@@ -10,6 +10,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import wraith.WraithAPI;
 import wraith.library.Coordinates;
@@ -51,11 +52,18 @@ public class Injector extends JavaPlugin
 			i.add(Coordinates.WRAITH_MATH.get());
 			i.add(Coordinates.WRAITH_LANG.get());
 			i.install();
+			new File(getDataFolder(), "plugins").mkdirs();
 		}
 		
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	@Override
+	public void onEnable()
+	{
+		Bukkit.getServer().getPluginManager().loadPlugins(new File(getDataFolder(), "plugins"));
 	}
 }

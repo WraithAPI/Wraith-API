@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>wraith</groupId>
 		<artifactId>Wraith-API</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.5</version>
 	</parent>
 	<name>minecraft</name>
 	<description>General minecraft</description>
